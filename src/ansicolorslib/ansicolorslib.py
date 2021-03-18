@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import random
+import os
 
 def ansirgb(red: int, green: int, blue: int) -> str:
     """
@@ -60,6 +61,9 @@ class Colors:
     BOLD_YELLOW = YELLOW + BOLD
     BOLD_PINK = PINK + BOLD
     
+    def __init__(self):
+        os.system("color")  # Without it, the COLOR_MANAGER won't work on some systems.
+
     @staticmethod
     def ansirgb(red: int, green: int, blue: int) -> str:
         """
@@ -191,7 +195,7 @@ class Colors:
         @return: None.
         """
         print(
-            begins_with
+            starts_with
             + Colors.ENDC
             + "["
             + Colors.BOLD_RED
