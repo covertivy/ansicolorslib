@@ -86,20 +86,20 @@ class Colors:
         @return: Random ANSI color value string.
         @rtype str.
         """
-        return rgb(
+        return ansirgb(
             random.choice(range(255)),
             random.choice(range(255)),
             random.choice(range(255)))
 
 
     @staticmethod
-    def print_success(success: str = "SUCCESS!", begins_with: str = "", ends_with: str = "") -> None:
+    def print_success(success: str = "SUCCESS!", starts_with: str = "", ends_with: str = "") -> None:
         """
         This function prints a given success message.
 
         @param success: The specified success message.
         @type success: str.
-        @param begins_with: Optional string to start with.
+        @param starts_with: Optional string to start with.
         @type starts_with: str.
         @param ends_with: Optional string to end with.
         @type ends_with: str.
@@ -107,7 +107,7 @@ class Colors:
         @return: None.
         """
         print(
-            begins_with
+            starts_with
             + Colors.ENDC
             + "["
             + Colors.BOLD_GREEN
@@ -121,13 +121,13 @@ class Colors:
     
 
     @staticmethod
-    def print_information(info: str, begins_with: str = "", ends_with: str = "") -> None:
+    def print_information(info: str, starts_with: str = "", ends_with: str = "") -> None:
         """
         This function prints a given information message.
 
         @param info: The specified information message.
         @type info: str.
-        @param begins_with: Optional string to start with.
+        @param starts_with: Optional string to start with.
         @type starts_with: str.
         @param ends_with: Optional string to end with.
         @type ends_with: str.
@@ -135,7 +135,7 @@ class Colors:
         @return: None.
         """
         print(
-            begins_with
+            starts_with
             + Colors.ENDC
             + "["
             + Colors.LIGHT_BLUE
@@ -149,13 +149,13 @@ class Colors:
     
 
     @staticmethod
-    def print_warning(warning: str = "WARNING!", begins_with: str = "", ends_with: str = "") -> None:
+    def print_warning(warning: str = "WARNING!", starts_with: str = "", ends_with: str = "") -> None:
         """
         This function prints a specified warning message.
 
         @param warning: The specified warning.
         @type warning: str.
-        @param begins_with: Optional string to start with.
+        @param starts_with: Optional string to start with.
         @type starts_with: str.
         @param ends_with: Optional string to end with.
         @type ends_with: str.
@@ -163,7 +163,7 @@ class Colors:
         @return: None.
         """
         print(
-            begins_with
+            starts_with
             + Colors.ENDC
             + "["
             + Colors.BOLD_YELLOW
@@ -177,13 +177,13 @@ class Colors:
 
 
     @staticmethod
-    def print_error(error: str = "ERROR!", begins_with: str = "", ends_with: str = "") -> None:
+    def print_error(error: str = "ERROR!", starts_with: str = "", ends_with: str = "") -> None:
         """
         This function prints a specified error message.
 
         @param error: The specified error.
         @type error: str
-        @param begins_with: Optional string to start with.
+        @param starts_with: Optional string to start with.
         @type starts_with: str.
         @param ends_with: Optional string to end with.
         @type ends_with: str.
@@ -205,7 +205,7 @@ class Colors:
 
 
     @staticmethod
-    def ansiprint(text: str, ansi_mod: str = "", begins_with: str = "", ends_with: str = "") -> None:
+    def ansiprint(text: str, ansi_mod: str = "", starts_with: str = "", ends_with: str = "") -> None:
         """
         This function is meant to replace the default python print function, it adds the ability to print text in colors.
 
@@ -213,14 +213,14 @@ class Colors:
         @type text: str.
         @param ansi_mod: The modifications we want to apply to the text. Defaults to "".
         @type ansi_mod: str, optional.
-        @param begins_with: An optional string to begin with, does not get affected by the ansi modifications. Defaults to "".
-        @type begins_with: str, optional.
+        @param starts_with: An optional string to begin with, does not get affected by the ansi modifications. Defaults to "".
+        @type starts_with: str, optional.
         @param ends_with: An optional string to end with, does not get affected by the ansi modifications. Defaults to "".
         @type ends_with: str, optional.
 
         @return: None.
         """
-        print(begins_with + ansi_mod + text + Colors.ENDC + ends_with)
+        print(starts_with + ansi_mod + text + Colors.ENDC + ends_with)
 
     @staticmethod
     def modify_string(input_str: str, parameters: list) -> str:
