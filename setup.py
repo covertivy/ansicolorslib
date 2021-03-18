@@ -4,7 +4,7 @@ with open('README.md', 'r') as f:
     long_description = f.read()
 
 setup(name='AnsiColorsLib',
-    version='1.0.1',
+    version='1.0.2',
     description='A small library containing ansi color functions.',
     author='Raz Kissos',
     author_email='kissosrazz@gmail.com',
