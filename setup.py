@@ -3,8 +3,8 @@ from setuptools import setup
 with open('README.md', 'r') as f:
     long_description = f.read()
 
-setup(name='AnsiColorsLib',
-    version='1.0.0',
+setup(name='ansicolorslib',
+    version='1.0.1',
     description='A small library containing ansi color functions.',
     author='Raz Kissos',
     author_email='kissosrazz@gmail.com',
